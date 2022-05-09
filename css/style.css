@@ -1,87 +1,268 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body{
+body {
     background-color: #E5EDF5;
     color: #707281;
     text-align: center;
+    margin: 0px;
+}
+
+@media (max-width: 767px) {
+    .section__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+    ".";
+        background-color: #E5EDF5;
+        margin: auto;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .grid__card {
+        margin: 0px 25px 30px 25px;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .grid__card__image {
+        width: 75px;
+        margin: 20px;
+    }
+
+    h1 {
+        text-transform: capitalize;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+
+    .grid_header {
+        height: 170px;
+    }
+
+    p {
+        margin-bottom: 30px;
+    }
+
+    hr {
+        width: 50px;
+        color: #98A1AE;
+        margin-bottom: 30px;
+    }
+
+    .button {
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 10px;
+        width: 100px;
+        border-radius: 20px;
+        margin: auto;
+        font-size: 0.8rem;
+    }
+
+    .button:hover {
+        background: #49ABF4;
+        color: #fff;
+
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px #707281;
+    }
+
+    .section__grid:nth-child(n+1)
+    {
+        margin-top: 10px;
+    }
 
 }
 
-.section__grid
-{
-    display: grid;
-    grid-template-columns: 1fr repeat(4, 3fr);
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .section__grid {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, 2fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+    "nav . ."
+    "nav . ."
+    "nav . ."
+    "nav . .";
+        background-color: #E5EDF5;
+        margin: auto;
+        min-height: 100vh;
+
+    }
+
+    .nav {
+        grid-area: nav;
+        background-color: rgba(115, 0, 255, 0.57);
+        padding: 30px;
+        border-radius: 0 30px 30px 0;
+    }
+
+    .grid__card {
+        margin: 25px;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .grid__card__image {
+        width: 75px;
+        margin: 20px;
+    }
+
+    h1 {
+        text-transform: capitalize;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+
+    .grid_header {
+        height: 180px;
+    }
+
+    p {
+        margin-bottom: 30px;
+    }
+
+    hr {
+        width: 50px;
+        color: #98A1AE;
+        margin-bottom: 30px;
+    }
+
+    .button {
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 10px;
+        width: 100px;
+        border-radius: 20px;
+        margin: auto;
+        font-size: 0.8rem;
+    }
+
+    .button:hover {
+        background: #49ABF4;
+        color: #fff;
+
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px #707281;
+    }
+
+    a, a:visited
+    {
+        color: white;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+
+    a:hover
+    {
+        color: black;
+        cursor: pointer;
+    }
+
+}
+
+@media (min-width: 1025px) {
+
+    .section__grid {
+        display: grid;
+        grid-template-columns: 200px repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
     "nav . . . ."
     "nav . . . .";
-    background-color: #E5EDF5;
-    margin: auto;
-    min-height: 100vh;
+        background-color: #E5EDF5;
+        margin: auto;
+        min-height: 100vh;
+    }
+
+    .nav {
+        grid-area: nav;
+        background-color: rgba(115, 0, 255, 0.57);
+        padding: 30px;
+        border-radius: 0 30px 30px 0;
+    }
+
+    .grid__card {
+        margin: 25px;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 20px;
+
+    }
+
+    .grid__card__image {
+        width: 100px;
+        margin: 20px;
+    }
+
+    h1 {
+        text-transform: capitalize;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+
+    .grid_header {
+        margin: 10px;
+        height: 200px;
+    }
+
+    p {
+        margin-bottom: 30px;
+    }
+
+    hr {
+        width: 50px;
+        color: #98A1AE;
+        margin-bottom: 30px;
+    }
+
+    .button {
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 10px;
+        width: 100px;
+        border-radius: 20px;
+        margin: auto;
+        font-size: 0.8rem;
+    }
+
+    .button:hover {
+        background: #49ABF4;
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px #707281;
+    }
+
+    a, a:visited
+    {
+        color: white;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+
+    a:hover
+    {
+        color: black;
+        cursor: pointer;
+    }
+
+    #hamburger {
+        /* Pour que la checkbox ne s'affiche pas */
+        display: none;
+    }
 
 }
 
 
-.grid__card
-{
-    margin: 25px;
-    background: #ffffff;
-    padding: 20px 20px 50px 20px;
-    border-radius: 5px;
-
-}
-
-.grid__card__image
-{
-    width: 100px;
-    /*border-radius: 50%;*/
-    margin: 20px;
-}
-
-h1
-{
-    text-transform: capitalize;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 1.3rem;
-
-}
-
-p
-{
-    margin-bottom: 20px;
-}
-
-hr{
-    width: 50px;
-    color: #98A1AE;
-    margin-bottom: 20px;
-}
-
-.button
-{
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 10px;
-    width: 100px;
-    margin:auto;
-    font-size: 0.8rem;
-}
-
-.button:hover
-{
-    background: #49ABF4;
-    color: #fff;
-    border-radius: 20px;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 1px 1px 10px #707281;
-}
-
-
-.nav
-{
-    grid-area: nav;
-    background-color: red;
-}
