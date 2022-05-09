@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    background-color: #E5EDF5;
+    color: #707281;
+    text-align: center;
+
+}
+
+.section__grid
+{
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 3fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "nav . . . ."
+    "nav . . . .";
+    background-color: #E5EDF5;
+    margin: auto;
+    min-height: 100vh;
+
+}
+
+
+.grid__card
+{
+    margin: 25px;
+    background: #ffffff;
+    padding: 20px 20px 50px 20px;
+    border-radius: 5px;
+
+}
+
+.grid__card__image
+{
+    width: 100px;
+    /*border-radius: 50%;*/
+    margin: 20px;
+}
+
+h1
+{
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.3rem;
+
+}
+
+p
+{
+    margin-bottom: 20px;
+}
+
+hr{
+    width: 50px;
+    color: #98A1AE;
+    margin-bottom: 20px;
+}
+
+.button
+{
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    width: 100px;
+    margin:auto;
+    font-size: 0.8rem;
+}
+
+.button:hover
+{
+    background: #49ABF4;
+    color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px #707281;
+}
+
+
+.nav
+{
+    grid-area: nav;
+    background-color: red;
+}
