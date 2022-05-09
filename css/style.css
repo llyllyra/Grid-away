@@ -15,11 +15,48 @@ body {
     }
 
     .nav {
+        overflow: visible;
+        background: rgba(115, 0, 255);
+        position: relative;
+    }
+
+    .nav #nav-hidden {
         display: none;
+        padding-top: 50px;
+        background: rgba(115, 0, 255);
+    }
+
+    .nav a {
+        color: white;
+        padding: 10px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+
+    }
+
+    .nav a.icon {
+        background-color: rgba(115, 0, 255);
+        display: block;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        text-align: right;
+    }
+
+    .nav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .nav a.icon:hover {
+        background-color: rgba(115, 0, 255);
+        color: black;
     }
 
     .grid__card {
-        margin: 0px 25px 30px 25px;
+        margin: 0 25px 30px 25px;
         background: #ffffff;
         padding: 20px;
         border-radius: 20px;
@@ -28,6 +65,7 @@ body {
     .grid__card__image {
         width: 75px;
         margin: 20px;
+        height: auto;
     }
 
     h1 {
@@ -64,7 +102,6 @@ body {
     .button:hover {
         background: #49ABF4;
         color: #fff;
-
         text-align: center;
         cursor: pointer;
         box-shadow: 1px 1px 10px #707281;
@@ -74,13 +111,19 @@ body {
     {
         margin-top: 10px;
     }
+
+    .section-card
+    {
+       padding-top: 50px;
+    }
 }
+
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
     .container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr repeat(2, 2fr);
         grid-template-rows: 1fr;
         gap: 20px 20px;
         grid-template-areas:
@@ -92,7 +135,7 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: 0px 0px;
+        gap: 0;
         grid-template-areas:
     ". ."
     ". ."
@@ -119,6 +162,7 @@ body {
     .grid__card__image {
         width: 75px;
         margin: 20px;
+        height: auto;
     }
 
     h1 {
@@ -174,6 +218,16 @@ body {
         cursor: pointer;
     }
 
+    .burger
+    {
+        display: none;
+    }
+
+    .nav-hidden
+    {
+        display: block;
+    }
+
 }
 
 @media (min-width: 1025px) {
@@ -191,12 +245,11 @@ body {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr 1fr;
-        gap: 0px 0px;
+        gap: 0 0;
         grid-template-areas:
     ". . . ."
     ". . . .";
         grid-area: section-card;
-        width: 1200px;
         margin: auto;
     }
 
@@ -205,6 +258,8 @@ body {
         background-color: rgba(115, 0, 255, 0.57);
         padding: 30px;
         border-radius: 0 30px 30px 0;
+        overflow: visible;
+        position: relative;
     }
 
     .grid__card {
@@ -217,6 +272,7 @@ body {
 
     .grid__card__image {
         width: 100px;
+        height: auto;
         margin: 20px;
     }
 
@@ -270,4 +326,15 @@ body {
         color: black;
         cursor: pointer;
     }
+
+    .burger
+    {
+        display: none;
+    }
+
+    .nav-hidden
+    {
+        display: block;
+    }
+
 }

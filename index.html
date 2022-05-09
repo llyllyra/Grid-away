@@ -8,16 +8,25 @@
     <title>Grid</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="grid">
 
 <div class="container">
+
     <nav class="nav">
-        <ul>
-            <li><a href="https://www.google.com/" target="_blank">Home</a></li>
-            <li><a href="https://store.steampowered.com/app/739630/Phasmophobia/" target="_blank"> Phasmophobia</a></li>
-            <li><a href="https://www.google.com/" target="_blank">Jeu</a></li>
-        </ul>
+        <div class="burger">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div id="nav-hidden">
+            <ul>
+                <li><a href="https://www.google.com/" target="_blank">Home</a></li>
+                <li><a href="https://store.steampowered.com/app/739630/Phasmophobia/" target="_blank"> Phasmophobia</a></li>
+                <li><a href="https://www.google.com/" target="_blank">Jeu</a></li>
+            </ul>
+        </div>
     </nav>
     <div class="section-card">
         <section class="grid__card">
@@ -120,6 +129,15 @@
     </div>
 </div>
 
-
+<script>
+    function myFunction() {
+        var x = document.getElementById("nav-hidden");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
 </body>
 </html>
