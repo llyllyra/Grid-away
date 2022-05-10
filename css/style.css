@@ -2,6 +2,11 @@ body {
     background-color: #E5EDF5;
     color: #707281;
     text-align: center;
+    font-size: 1.2rem;
+}
+
+.grid__card:hover {
+    box-shadow: 10px 10px 20px #707281;
 }
 
 @media (max-width: 767px) {
@@ -16,14 +21,13 @@ body {
 
     .nav {
         overflow: visible;
-        background: rgba(115, 0, 255);
+        background-color: rgba(115, 0, 255, 0.57);
         position: relative;
     }
 
     .nav #nav-hidden {
         display: none;
         padding-top: 50px;
-        background: rgba(115, 0, 255);
     }
 
     .nav a {
@@ -36,7 +40,7 @@ body {
     }
 
     .nav a.icon {
-        background-color: rgba(115, 0, 255);
+        background-color: rgba(115, 0, 255, 0.57);
         display: block;
         position: absolute;
         right: 0;
@@ -46,12 +50,6 @@ body {
     }
 
     .nav a:hover {
-        background-color: #ddd;
-        color: black;
-    }
-
-    .nav a.icon:hover {
-        background-color: rgba(115, 0, 255);
         color: black;
     }
 
@@ -104,20 +102,17 @@ body {
         color: #fff;
         text-align: center;
         cursor: pointer;
-        box-shadow: 1px 1px 10px #707281;
+        box-shadow: 2px 2px 10px #707281;
     }
 
-    .section__grid:nth-child(n+1)
-    {
+    .section__grid:nth-child(n+1) {
         margin-top: 10px;
     }
 
-    .section-card
-    {
-       padding-top: 50px;
+    .section-card {
+        padding-top: 50px;
     }
 }
-
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
@@ -205,26 +200,22 @@ body {
         box-shadow: 1px 1px 10px #707281;
     }
 
-    a, a:visited
-    {
+    a, a:visited {
         color: white;
         font-size: 1.5rem;
         text-decoration: none;
     }
 
-    a:hover
-    {
+    a:hover {
         color: black;
         cursor: pointer;
     }
 
-    .burger
-    {
+    .burger {
         display: none;
     }
 
-    .nav-hidden
-    {
+    .nav-hidden {
         display: block;
     }
 
@@ -233,24 +224,24 @@ body {
 @media (min-width: 1025px) {
     .container {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         grid-template-rows: 1fr;
-        gap: 20px 50px;
         grid-template-areas:
-    "nav section-card section-card section-card section-card section-card";
+        "nav section-card section-card section-card section-card";
         min-height: 100vh;
+        margin: auto;
     }
 
     .section-card {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr 1fr;
-        gap: 0 0;
         grid-template-areas:
-    ". . . ."
-    ". . . .";
+        ". . . ."
+        ". . . .";
         grid-area: section-card;
-        margin: auto;
+        min-width: 1000px;
+        margin: 0 auto;
     }
 
     .nav {
@@ -267,7 +258,6 @@ body {
         background: #ffffff;
         padding: 20px;
         border-radius: 20px;
-
     }
 
     .grid__card__image {
@@ -293,9 +283,19 @@ body {
     }
 
     hr {
+        display: none;
         width: 50px;
         color: #98A1AE;
         margin-bottom: 30px;
+    }
+
+    .button::before
+    {
+        content: "";
+        border-top: 3px solid grey;
+        width: 100px;
+        min-height: 1px;
+        margin: 10px 0;
     }
 
     .button {
@@ -327,13 +327,11 @@ body {
         cursor: pointer;
     }
 
-    .burger
-    {
+    .burger {
         display: none;
     }
 
-    .nav-hidden
-    {
+    .nav-hidden {
         display: block;
     }
 
